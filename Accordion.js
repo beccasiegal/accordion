@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Accordion.css'
 
 export default class Accordion extends Component {
   static defaultProps = {
@@ -19,7 +18,7 @@ export default class Accordion extends Component {
       <li className='Accordion__item' key={idx}>
         <button
           type='button'
-          onClick={() => this.handleSetActiveSecion(idx)}
+          onClick={() => this.handleActiveSecion(idx)}
         >
           {section.title}
         </button>
@@ -34,7 +33,7 @@ export default class Accordion extends Component {
     return (
       <ul className='Accordion'>
         {sections.map((section, idx) =>
-          this.renderItem(section, idx, activeSectionIndex)
+          this.renderExample(section, idx, activeSectionIndex)
         )}
       </ul>
     )
